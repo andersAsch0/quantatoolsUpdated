@@ -1,9 +1,9 @@
-Package: quantatools
-Title: Analysis of quantum in archaeological data with cosine quantogram and related statistical methods
+Package: quantatoolsUpdated
+Title: Analysis of quantum in archaeological data with cosine quantogram and related statistical methods (updated to work with newer R)
 Version: 0.0.1
 Authors@R: person("Maciej", "Kasiński", email = "maciejkasinski@gmail.com", role = c("cre", "aut"))
 Date: 2019-02-15
-URL: https://github.com/maciejkasinski/quantatools
+URL: https://github.com/andersAsch0/quantatoolsUpdated
 Description: The package implements algorithms from cosine quantogram related research
 Depends: R (>= 3.3.2)
 License: MIT 
