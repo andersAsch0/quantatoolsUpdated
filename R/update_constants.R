@@ -6,9 +6,8 @@
 #' @param Qmin I have no clue what this is
 #'
 update_constants = function(rngStart, rngEnd, stepSize, Qmin){
-  CONSTANTS_QUANTOGRAM=list(
-    RNG_START = rngStart,   # minimal threshold for search
-    RNG_END = rngEnd,       # maximal threshold for search
-    STEP = stepSize,        # single step size
-    Q_MIN = Qmin)
+  newConstants = list(rngStart, 6, 0.01, 0.03)
+  names(newConstants) = c("RNG_START", "RNG_END", "STEP", "Q_MIN")
+  options(CONSTANTS_QUANTOGRAM = newConstants)
+  getOption("CONSTANTS_QUANTOGRAM")
 }
