@@ -65,7 +65,6 @@ compute_bootstrap <- function(set,
     geom_vline(
       data = original_quanta,
       aes(xintercept = q_hat),
-      colour = col_blu,
       linetype = "dashed",
       size = 1) +
     geom_vline(

@@ -4,8 +4,11 @@
 \alias{plot_calculate_selective_least_squares}
 \title{Plot and calculate SLS results}
 \usage{
-plot_calculate_selective_least_squares(x, sector_name,
-  params = getOption("CONSTANTS_SLS"))
+plot_calculate_selective_least_squares(
+  x,
+  sector_name,
+  params = getOption("CONSTANTS_SLS")
+)
 }
 \arguments{
 \item{x}{numeric vector of measurement values}

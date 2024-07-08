@@ -4,8 +4,13 @@
 \alias{doc_size_distr_plot}
 \title{Plot measurements in order for documenting purpose}
 \usage{
-doc_size_distr_plot(df = data_niche, sector_name, building_name = NULL,
-  margin = 0.1, color = "black")
+doc_size_distr_plot(
+  df = data_niche,
+  sector_name,
+  building_name = NULL,
+  margin = 0.1,
+  color = "black"
+)
 }
 \arguments{
 \item{margin}{allowed deviation from single quantum (as percentage of quantum). An interval from `(1 - margin)*quantum` to `(1 + margin)*quantum` is plotted.}

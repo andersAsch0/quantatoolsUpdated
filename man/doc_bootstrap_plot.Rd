@@ -4,8 +4,14 @@
 \alias{doc_bootstrap_plot}
 \title{Boostrap plot for documenting purpose}
 \usage{
-doc_bootstrap_plot(df = data_niche, sector_name, building_name = NULL,
-  extra_suffix = "", n_bootstrap_samples = 500, conf = 0.05)
+doc_bootstrap_plot(
+  df = data_niche,
+  sector_name,
+  building_name = NULL,
+  extra_suffix = "",
+  n_bootstrap_samples = 500,
+  conf = 0.05
+)
 }
 \arguments{
 \item{conf}{}
