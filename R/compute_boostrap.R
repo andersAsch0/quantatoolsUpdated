@@ -12,11 +12,8 @@
 compute_bootstrap <- function(set,
                               label,
                               conf=0.05,
-                              n_bootstrap_samples=500,
-                              Q_MIN=Q_MIN,
-                              RNG_START=RNG_START,
-                              RNG_END=RNG_END,
-                              STEP=STEP) {
+                              n_bootstrap_samples=500
+                              ) {
 
   results = calculate_quantogram(set)
   # TODO: if n(best_score)>1, take max
@@ -27,7 +24,7 @@ compute_bootstrap <- function(set,
 
   # Bootstrap confidence interval procedure
   results_all = NULL
-  p <- progress_estimated(n_bootstrap_samples, min_time = 0)
+  p <- progress_estimated(n_bootstrap_samples, min_time = 0) 
   results_sector = NULL
   for (n in 1:n_bootstrap_samples) {
 
@@ -59,21 +56,21 @@ compute_bootstrap <- function(set,
   # Plot boostrap confidence interval for quantum
   p <- ggplot(df_results_all,
               aes(q_hat)) +
-    geom_histogram(binwidth = STEP,
+    geom_histogram(binwidth = getOption("CONSTANTS_QUANTOGRAM")$STEP,
                    fill = "white",
-                   color = "black") +
-    geom_vline(
-      data = original_quanta,
-      aes(xintercept = q_hat),
-      linetype = "dashed",
-      size = 1) +
-    geom_vline(
-      xintercept = borders,
-      colour = col_neg,
-      linetype = "dashed",
-      size = 1) +
-    xlab(label = "quantum estimation") +
-    theme_minimal()
+                   color = "black")+
+  geom_vline(
+    data = original_quanta,
+    aes(xintercept = q_hat),
+    linetype = "dashed",
+    size = 1) +
+  geom_vline(
+    xintercept = borders,
+    colour = "red",
+    linetype = "dashed",
+    size = 1) +
+  xlab(label = "quantum estimation") +
+  theme_minimal()
   p
   l <- list("p"=p, "df_results_all"=df_results_all, "borders"=borders)
   return(l)
