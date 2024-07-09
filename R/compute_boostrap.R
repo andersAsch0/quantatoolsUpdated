@@ -17,14 +17,13 @@ compute_bootstrap <- function(set,
 
   results = calculate_quantogram(set)
   # TODO: if n(best_score)>1, take max
-  best_score = results %>% group_by %>% filter(f_q == max(f_q))
+  best_score = results %>% group_by %>% filter(f_q == max(f_q)) #highest f(q)
   original_quanta = data.frame(label=label,
                                q_hat = best_score$q,
                                peak_hat = best_score$f_q)
 
   # Bootstrap confidence interval procedure
   results_all = NULL
-  p <- progress_estimated(n_bootstrap_samples, min_time = 0) 
   results_sector = NULL
   for (n in 1:n_bootstrap_samples) {
 
@@ -42,7 +41,6 @@ compute_bootstrap <- function(set,
 
     results_sector[[n]] = data.frame(q_hat, peak_hat)
 
-    p$tick()$print()
   }
   results_sector = do.call(rbind.data.frame, results_sector)
   df_results_all = data.frame(label=label, results_sector)
@@ -63,15 +61,17 @@ compute_bootstrap <- function(set,
     data = original_quanta,
     aes(xintercept = q_hat),
     linetype = "dashed",
-    size = 1) +
+    linewidth = 1) +
   geom_vline(
     xintercept = borders,
     colour = "red",
     linetype = "dashed",
-    size = 1) +
+    linewidth = 1) +
   xlab(label = "quantum estimation") +
   theme_minimal()
-  p
+  
+  print(p)
+  
   l <- list("p"=p, "df_results_all"=df_results_all, "borders"=borders)
   return(l)
 }

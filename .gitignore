@@ -3,4 +3,6 @@
 .RData
 .Ruserdata
 testing.R
+doc_size_distr_plot.R
+doc_bootstrap_plot.R
 *hello*

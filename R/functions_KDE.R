@@ -1,14 +1,15 @@
 #' Get KDE distribution
 #'
-#' @param data_input
-#' @param band
+#' @param data_input observations vector
+#' @param band kernel bandwidth smooth param. higher is smoother
+#' @param  grid_size the number of equally spaced points at which to estimate the density.
 #'
-#' @return
+#' @return dataframe of x and y
 #' @export
 #'
 #' @examples
-calculate_KDE = function(data_input, band = 0.05) {
-  bkde(data_input, kernel = "normal", bandwidth = band) %>%
+calculate_KDE = function(data_input, band = 1, grid_size = 1000) {
+  bkde(data_input, kernel = "normal", bandwidth = band, gridsize = grid_size) %>%
     as.data.frame() %>%
     filter(x > 0 & y > 0) -> kde
   return(kde)
@@ -16,14 +17,27 @@ calculate_KDE = function(data_input, band = 0.05) {
 
 #' Sample from KDE distribution
 #'
-#' @param kde
-#' @param size
+#' @param kde dataframe of kde
+#' @param size number of samples
 #'
-#' @return
+#' @return vector of samples
 #' @export
 #'
 #' @examples
 sample_KDE = function(kde, size = 1000) {
   sample <- sample(size = size, x = kde$x, replace = T, prob = kde$y/sum(kde$y))
   return(sample)
+}
+
+#' plot kde
+#'
+#' @param kde this should be a dataframe of two columns
+#'
+#' @return plots kde
+#' @export
+#'
+#' @examples just do it
+plot_KDE = function(kde) {
+  ggplot(data = kde, mapping = aes(x = x, y = y)) +
+    geom_point() 
 }

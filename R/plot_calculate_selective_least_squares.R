@@ -14,13 +14,11 @@ plot_calculate_selective_least_squares = function(x, sector_name, params=getOpti
   quanta_pairs <- combn(all_quanta, params$SLS_MAX_N_QUANTA)
 
   scores = NULL
-  pb <- progress_estimated(ncol(quanta_pairs), min_time = 0)
   for (i in 1:ncol(quanta_pairs)) {
     quantum_1 <- quanta_pairs[1, i]
     quantum_2 <- quanta_pairs[2, i]
     score <- calculate_selective_least_squares(x = x, quanta = c(quantum_1, quantum_2))
     scores <- rbind(scores, data.frame(quantum_1 = quantum_1, quantum_2 = quantum_2, score = score))
-    pb$tick()$print()
   }
 
   p <- ggplot(scores %>% mutate(new_score = 1 / score ^ 2),
@@ -32,3 +30,4 @@ plot_calculate_selective_least_squares = function(x, sector_name, params=getOpti
     theme_minimal()
   return(list("p"=p, "scores"=scores))
 }
+
