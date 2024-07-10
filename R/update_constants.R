@@ -5,6 +5,7 @@
 #' @param stepSize the increment size of the calculation
 #' @param Qmin I have no clue what this is
 #'
+#' @export
 update_constants = function(rngStart, rngEnd, stepSize, Qmin){
   newConstants = list(rngStart, 6, 0.01, 0.03)
   names(newConstants) = c("RNG_START", "RNG_END", "STEP", "Q_MIN")
