@@ -53,7 +53,7 @@ compute_bootstrap <- function(set,
   # Plot boostrap confidence interval for quantum
   p <- ggplot(df_results_all,
               aes(q_hat)) +
-    geom_histogram(binwidth = getOption("CONSTANTS_QUANTOGRAM")$STEP,
+    geom_histogram(binwidth = (limits$max - limits$min)/50,
                    fill = "white",
                    color = "black")+ #plot histogram
     geom_vline( #original quantum is shown as a black dashed line
