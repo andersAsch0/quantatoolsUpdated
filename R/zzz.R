@@ -13,5 +13,5 @@
 }
 
 .onAttach <- function(libname, pkgname) {
-  packageStartupMessage("Welcome! This is a version 3e-14 of quantatools.")
+  packageStartupMessage("Welcome! This is a version 3e-14 of quantatools that has been updated in 2024 by andersAsch0.")
 }

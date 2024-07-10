@@ -7,7 +7,6 @@
 #' @return dataframe of x and y
 #' @export
 #'
-#' @examples
 calculate_KDE = function(data_input, band = 1, grid_size = 1000) {
   bkde(data_input, kernel = "normal", bandwidth = band, gridsize = grid_size) %>%
     as.data.frame() %>%
@@ -23,7 +22,6 @@ calculate_KDE = function(data_input, band = 1, grid_size = 1000) {
 #' @return vector of samples
 #' @export
 #'
-#' @examples
 sample_KDE = function(kde, size = 1000) {
   sample <- sample(size = size, x = kde$x, replace = T, prob = kde$y/sum(kde$y))
   return(sample)
@@ -33,10 +31,8 @@ sample_KDE = function(kde, size = 1000) {
 #'
 #' @param kde this should be a dataframe of two columns
 #'
-#' @return plots kde
 #' @export
 #'
-#' @examples just do it
 plot_KDE = function(kde) {
   ggplot(data = kde, mapping = aes(x = x, y = y)) +
     geom_point() 

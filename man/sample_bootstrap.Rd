@@ -7,8 +7,16 @@
 sample_bootstrap(x, decrease_by = 0)
 }
 \arguments{
-\item{decrease_by}{}
+\item{x}{vector of data to sample}
+
+\item{decrease_by}{size of sample = length of x - decrease_by}
+}
+\value{
+the vector of samples
 }
 \description{
 Get bootstrap sample
+}
+\examples{
+SW1 = c(10.8, 11.2, 12.7, 16.4, 16.9, 20.5) SWsample = sample_bootstrap(SW1, decrease_by = 2)
 }

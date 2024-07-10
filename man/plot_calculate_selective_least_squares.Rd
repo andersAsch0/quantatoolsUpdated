@@ -13,7 +13,9 @@ plot_calculate_selective_least_squares(
 \arguments{
 \item{x}{numeric vector of measurement values}
 
-\item{params}{}
+\item{sector_name}{label added to plot}
+
+\item{params}{(optional) default is set to use CONSTANTS_SLS option}
 }
 \description{
 Plot and calculate SLS results

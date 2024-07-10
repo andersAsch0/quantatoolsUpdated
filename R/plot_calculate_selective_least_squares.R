@@ -1,13 +1,11 @@
 #' Plot and calculate SLS results
 #'
 #' @param x numeric vector of measurement values
-#' @param sector_name
-#' @param params
+#' @param sector_name label added to plot
+#' @param params (optional) default is set to use CONSTANTS_SLS option
 #'
-#' @return
 #' @export
 #'
-#' @examples
 plot_calculate_selective_least_squares = function(x, sector_name, params=getOption("CONSTANTS_SLS")) {
 
   all_quanta <- seq(params$SLS_RNG_START, params$SLS_RNG_END, params$SLS_STEP)

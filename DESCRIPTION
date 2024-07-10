@@ -1,5 +1,5 @@
 Package: quantatoolsUpdated
-Title: Analysis of quantum in archaeological data with cosine quantogram and related statistical methods (updated to work with newer R)
+Title: Analysis of quantum in archaeological data with cosine quantogram and related statistical methods (updated to work with newer R by AndersAsch0 in 2024)
 Version: 0.0.1
 Authors@R: person("Maciej", "Kasiński", email = "maciejkasinski@gmail.com", role = c("cre", "aut"))
 Date: 2019-02-15

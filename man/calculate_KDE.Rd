@@ -4,10 +4,17 @@
 \alias{calculate_KDE}
 \title{Get KDE distribution}
 \usage{
-calculate_KDE(data_input, band = 0.05)
+calculate_KDE(data_input, band = 1, grid_size = 1000)
 }
 \arguments{
-\item{band}{}
+\item{data_input}{observations vector}
+
+\item{band}{kernel bandwidth smooth param. higher is smoother}
+
+\item{grid_size}{the number of equally spaced points at which to estimate the density.}
+}
+\value{
+dataframe of x and y
 }
 \description{
 Get KDE distribution

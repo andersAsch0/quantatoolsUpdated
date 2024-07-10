@@ -7,7 +7,12 @@
 sample_KDE(kde, size = 1000)
 }
 \arguments{
-\item{size}{}
+\item{kde}{dataframe of kde}
+
+\item{size}{number of samples}
+}
+\value{
+vector of samples
 }
 \description{
 Sample from KDE distribution

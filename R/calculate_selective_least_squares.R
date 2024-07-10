@@ -1,14 +1,12 @@
 #' Calculate selective least squares method (by Paakanen)
 #'
-#' @description
+#' @description Calculate selective least squares method (by Paakanen) 
 #'
 #' @param x numeric vector of measurement values
 #' @param quanta
 #'
-#' @return
 #' @export
 #'
-#' @examples
 calculate_selective_least_squares = function(x, quanta) {
 
   least_absolute_remainder = function(z, q) {

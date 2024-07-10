@@ -4,16 +4,7 @@
 \alias{compute_bootstrap}
 \title{Compute boostrap confidence interval}
 \usage{
-compute_bootstrap(
-  set,
-  label,
-  conf = 0.05,
-  n_bootstrap_samples = 500,
-  Q_MIN = Q_MIN,
-  RNG_START = RNG_START,
-  RNG_END = RNG_END,
-  STEP = STEP
-)
+compute_bootstrap(set, label, conf = 0.05, n_bootstrap_samples = 500)
 }
 \arguments{
 \item{set}{measurements vector}
@@ -23,6 +14,9 @@ compute_bootstrap(
 \item{conf}{confidence level, 0.05 by default}
 
 \item{n_bootstrap_samples}{number of bootstrap samples}
+}
+\value{
+dataframe with lots of info and ggplot
 }
 \description{
 Compute boostrap confidence interval
