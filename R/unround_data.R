@@ -10,7 +10,7 @@
 unround_data = function(input, depth=0.01) {
   unroundedVector = input
   i = 1
-  while(i<length(dataVector)+1){
+  while(i<length(input)+1){
     unroundedVector[i] = input[i] +  runif(1, -depth/2, depth/2)
     i = i+1
   }
