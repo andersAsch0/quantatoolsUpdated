@@ -3,6 +3,7 @@
 #' @param x numeric vector of measurement values
 #' @param params cosine quantogram parameters including "RNG_START", "RNG_END", "STEP", "Q_MIN"
 #'
+#' @return two columned dataframe of quanta (q) and their scores (f_q)
 #' @export
 #'
 calculate_quantogram = function(x,

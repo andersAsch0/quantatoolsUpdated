@@ -11,6 +11,9 @@ calculate_quantogram(x, params = getOption("CONSTANTS_QUANTOGRAM"))
 
 \item{params}{cosine quantogram parameters including "RNG_START", "RNG_END", "STEP", "Q_MIN"}
 }
+\value{
+two columned dataframe of quanta (q) and their scores (f_q)
+}
 \description{
 Calculate Kendall's cosine quantogram
 }
