@@ -7,7 +7,7 @@
 #'
 #' @export
 update_constants = function(rngStart, rngEnd, stepSize, Qmin){
-  newConstants = list(rngStart, 6, 0.01, 0.03)
+  newConstants = list(rngStart, rngEnd, stepSize, Qmin)
   names(newConstants) = c("RNG_START", "RNG_END", "STEP", "Q_MIN")
   options(CONSTANTS_QUANTOGRAM = newConstants)
   getOption("CONSTANTS_QUANTOGRAM")
