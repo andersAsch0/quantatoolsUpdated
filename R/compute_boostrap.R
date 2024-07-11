@@ -15,6 +15,7 @@ compute_bootstrap <- function(set,
                               ) {
 
   results = calculate_quantogram(set) #results is the normal quantogram (aka list of quantums and their scores)
+  colnames(results) <- c('q', 'f_q')
   # TODO: if n(best_score)>1, take max
   best_score = results %>% group_by %>% filter(f_q == max(f_q)) #highest f(q)
   original_quanta = data.frame(label=label, #dataframe w three columns: label, quantum, and its score (above)
