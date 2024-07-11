@@ -32,6 +32,7 @@ compute_bootstrap <- function(set,
 
     # 2. Estimate quantum and peak of the sample (acting as if the original set was the true makeup of the pop and seeing how far off we get from a sample)
     results = calculate_quantogram(sample)
+    colnames(results) <- c('q', 'f_q')
     
     # 3. Collect results
     # TODO: if >1 maximum

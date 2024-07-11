@@ -30,6 +30,7 @@ calculate_quantogram = function(x,
     f_q = A * sum # quanta
     results = rbind(results, data.frame(q, f_q))
   }
+  colnames(results) <- c('q', 'f_q')
   return(results)
 }
 
