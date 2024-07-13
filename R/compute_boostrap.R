@@ -71,8 +71,6 @@ compute_bootstrap <- function(set,
     xlab(label = "quantum estimation") +
     theme_minimal()
   
-  print(p)
-  
   l <- list("p"=p, "df_results_all"=df_results_all, "borders"=borders)
   return(l)
 }

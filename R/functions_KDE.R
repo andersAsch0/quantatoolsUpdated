@@ -37,3 +37,8 @@ plot_KDE = function(kde) {
   ggplot(data = kde, mapping = aes(x = x, y = y)) +
     geom_point() 
 }
+
+
+#' sample the (non quantal) KDE repeatedly and take cosine quantograms of the samples, in order to determine the significance of quantogram scores
+#' 
+#' 

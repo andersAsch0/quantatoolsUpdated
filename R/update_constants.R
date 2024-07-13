@@ -3,7 +3,7 @@
 #' @param rngStart where the quantum search starts
 #' @param rngEnd where the search ends
 #' @param stepSize the increment size of the calculation
-#' @param Qmin I have no clue what this is
+#' @param Qmin smallest allowed quanta (calculations will skip it even its included in the RNG range)
 #'
 #' @export
 update_constants = function(rngStart, rngEnd, stepSize, Qmin){

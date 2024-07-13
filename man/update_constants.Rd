@@ -13,7 +13,7 @@ update_constants(rngStart, rngEnd, stepSize, Qmin)
 
 \item{stepSize}{the increment size of the calculation}
 
-\item{Qmin}{I have no clue what this is}
+\item{Qmin}{smallest allowed quanta (calculations will skip it even its included in the RNG range)}
 }
 \description{
 update the constants used when calculating the cosine quantogram (and some other functions)
