@@ -7,12 +7,12 @@
 sample_bootstrap(x, decrease_by = 0)
 }
 \arguments{
-\item{x}{vector of data to sample}
+\item{x}{numeric vector of measurement values}
 
 \item{decrease_by}{size of sample = length of x - decrease_by}
 }
 \value{
-the vector of samples
+the numeric vector of samples
 }
 \description{
 Get bootstrap sample

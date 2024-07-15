@@ -7,16 +7,13 @@
 unround_data(input, depth = 0.01)
 }
 \arguments{
-\item{input}{a vector of measurements}
+\item{input}{numeric vector of measurement values}
 
 \item{depth}{the accuracy, analogous to smallest significant digit}
 }
 \value{
-the vector input, unrounded (random number b/w -1/2 depth and 1/2 depth)
+the unrounded numeric vector (random number b/w -1/2 depth and 1/2 depth)
 }
 \description{
 Unrounding method
-}
-\examples{
-data = c(1,2,3) unroundedData = unround_data(data)
 }

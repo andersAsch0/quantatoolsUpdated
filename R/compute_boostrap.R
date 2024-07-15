@@ -1,6 +1,6 @@
 #' Compute boostrap confidence interval
 #'
-#' @param set measurements vector
+#' @param set numeric vector of measurement values
 #' @param label (optional) label of dataset
 #' @param conf confidence level, 0.05 by default
 #' @param n_bootstrap_samples number of bootstrap samples

@@ -7,14 +7,14 @@
 calculate_KDE(data_input, band = 1, grid_size = 1000)
 }
 \arguments{
-\item{data_input}{observations vector}
+\item{data_input}{numeric vector of measurement values}
 
 \item{band}{kernel bandwidth smooth param. higher is smoother}
 
 \item{grid_size}{the number of equally spaced points at which to estimate the density.}
 }
 \value{
-dataframe of x and y
+dataframe of x and y coordinates
 }
 \description{
 Get KDE distribution

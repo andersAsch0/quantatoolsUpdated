@@ -7,7 +7,7 @@
 compute_bootstrap(set, label, conf = 0.05, n_bootstrap_samples = 500)
 }
 \arguments{
-\item{set}{measurements vector}
+\item{set}{numeric vector of measurement values}
 
 \item{label}{(optional) label of dataset}
 

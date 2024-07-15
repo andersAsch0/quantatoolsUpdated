@@ -7,7 +7,7 @@
 plot_KDE(kde)
 }
 \arguments{
-\item{kde}{this should be a dataframe of two columns}
+\item{kde}{dataframe of two columns, the x and y coords of points along the KDE}
 }
 \description{
 plot kde
