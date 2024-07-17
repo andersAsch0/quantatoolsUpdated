@@ -9,7 +9,7 @@ calculate_selective_least_squares(x, quanta)
 \arguments{
 \item{x}{numeric vector of measurement values}
 
-\item{quanta}{}
+\item{quanta}{numeric vector of quanta to check together}
 }
 \description{
 Calculate selective least squares method (by Paakanen)

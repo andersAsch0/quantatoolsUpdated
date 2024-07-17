@@ -2,7 +2,7 @@
 % Please edit documentation in R/plot_calculate_selective_least_squares.R
 \name{plot_calculate_selective_least_squares}
 \alias{plot_calculate_selective_least_squares}
-\title{Plot and calculate SLS results}
+\title{Plot and calculate SLS results (for whole range of possible quanta)}
 \usage{
 plot_calculate_selective_least_squares(
   x,
@@ -18,5 +18,5 @@ plot_calculate_selective_least_squares(
 \item{params}{(optional) default is set to use CONSTANTS_SLS option}
 }
 \description{
-Plot and calculate SLS results
+Plot and calculate SLS results (for whole range of possible quanta)
 }
