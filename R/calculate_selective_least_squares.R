@@ -1,9 +1,9 @@
-#' Calculate selective least squares method (by Paakanen)
+#' Calculate selective least squares method (by Paakanen) 
 #'
 #' @description Calculate selective least squares method (by Paakanen) 
 #'
 #' @param x numeric vector of measurement values
-#' @param quanta
+#' @param quanta numeric vector of quanta to check together
 #'
 #' @export
 #'

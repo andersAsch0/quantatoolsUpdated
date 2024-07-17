@@ -1,4 +1,4 @@
-#' Plot and calculate SLS results
+#' Plot and calculate SLS results (for whole range of possible quanta)
 #'
 #' @param x numeric vector of measurement values
 #' @param sector_name label added to plot
