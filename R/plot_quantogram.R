@@ -20,7 +20,7 @@ plot_quantogram = function(df_results, sector_label) {
   }
 
   title = sector_label
-  subtitle = paste0("Peak in quantum = ", quantum)
+  subtitle = paste0("Peak = ", quantum, " at ", max(df_results$quantogram.score))
 
   sp <- ggplot(df_results, aes(x=q, y=quantogram.score)) +
     geom_line() +
