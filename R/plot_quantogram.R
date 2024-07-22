@@ -7,21 +7,21 @@
 #' @export
 #'
 plot_quantogram = function(df_results, sector_label) {
-
+  
   names(df_results) <- c("q", "quantogram.score")
   quantum <- df_results %>%
     group_by %>%
     filter(quantogram.score==max(quantogram.score)) %>% .$q
-
+  
   if (quantum %>% length > 1) {
     message("Recognised multiple candidates for quantum. The highest value was selected")
     message(paste0(quantum, sep=" "))
     quantum = max(quantum)
   }
-
+  
   title = sector_label
-  subtitle = paste0("Peak = ", quantum, " at ", max(df_results$quantogram.score))
-
+  subtitle = paste0("Peak = ", max(df_results$quantogram.score), " at ", quantum)
+  
   sp <- ggplot(df_results, aes(x=q, y=quantogram.score)) +
     geom_line() +
     geom_point()
