@@ -2,7 +2,7 @@
 % Please edit documentation in R/calculate_quantogram.R
 \name{get_quantum}
 \alias{get_quantum}
-\title{Simply calculate a quantum}
+\title{Simply calculate a quantum (using cosine quantogram)}
 \usage{
 get_quantum(x)
 }
@@ -10,5 +10,5 @@ get_quantum(x)
 \item{x}{}
 }
 \description{
-Simply calculate a quantum
+Simply calculate a quantum (using cosine quantogram)
 }

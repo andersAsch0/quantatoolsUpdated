@@ -17,8 +17,8 @@ Analysis of quantum in archaeological data with cosine quantogram and related st
 
 ## Installation
 
-You can install quantatools from github with:
+You can install quantatoolsUpdated from github with:
 
 ```{r gh-installation, eval = FALSE}
-devtools::install_github("maciejkasinski/quantatools", dependencies = FALSE)
+devtools::install_github("andersAsch0/quantatoolsUpdated", dependencies = FALSE)
 ```
